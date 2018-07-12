@@ -1601,7 +1601,7 @@ views:
     as: listCollection
     collection: ListCollectionCheck
   - operation: readCollection
-    as: readCollection
+    as: readgithubCollection
     collection: ListCollectionCheck
     enforceSchema: true
 - name: "run_dae_model"

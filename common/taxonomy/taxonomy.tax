@@ -1,0 +1,4 @@
+name: ProjectTaxonomy
+version: 1.0.0
+extends:
+  name: SystemTaxonomy

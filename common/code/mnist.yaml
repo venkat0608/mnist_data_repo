@@ -1,0 +1,1686 @@
+library: mnist
+
+automate: 
+- name: MNISTdataworkflow
+  schedule: MANUAL
+  includeDependencies: true
+  include:
+  - view: run_dae_model
+
+collections: 
+- name: ListCollectionCheck
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - ${dataDir}/data/m*.csv
+  schema: mnistCol_schema
+- name: mnistCol
+  header: true
+  format: delimitedFile
+  filePatterns:
+  - ${input_dir}/mnist_10k.csv
+  schema: mnistCol_schema
+schemas: 
+- name: mnistCol_schema
+  columns:
+  - name: target
+    typeID: Common:Integer
+  - name: f0
+    typeID: Common:Real
+  - name: f1
+    typeID: Common:Real
+  - name: f2
+    typeID: Common:Real
+  - name: f3
+    typeID: Common:Real
+  - name: f4
+    typeID: Common:Real
+  - name: f5
+    typeID: Common:Real
+  - name: f6
+    typeID: Common:Real
+  - name: f7
+    typeID: Common:Real
+  - name: f8
+    typeID: Common:Real
+  - name: f9
+    typeID: Common:Real
+  - name: f10
+    typeID: Common:Real
+  - name: f11
+    typeID: Common:Real
+  - name: f12
+    typeID: Common:Real
+  - name: f13
+    typeID: Common:Real
+  - name: f14
+    typeID: Common:Real
+  - name: f15
+    typeID: Common:Real
+  - name: f16
+    typeID: Common:Real
+  - name: f17
+    typeID: Common:Real
+  - name: f18
+    typeID: Common:Real
+  - name: f19
+    typeID: Common:Real
+  - name: f20
+    typeID: Common:Real
+  - name: f21
+    typeID: Common:Real
+  - name: f22
+    typeID: Common:Real
+  - name: f23
+    typeID: Common:Real
+  - name: f24
+    typeID: Common:Real
+  - name: f25
+    typeID: Common:Real
+  - name: f26
+    typeID: Common:Real
+  - name: f27
+    typeID: Common:Real
+  - name: f28
+    typeID: Common:Real
+  - name: f29
+    typeID: Common:Real
+  - name: f30
+    typeID: Common:Real
+  - name: f31
+    typeID: Common:Real
+  - name: f32
+    typeID: Common:Real
+  - name: f33
+    typeID: Common:Real
+  - name: f34
+    typeID: Common:Real
+  - name: f35
+    typeID: Common:Real
+  - name: f36
+    typeID: Common:Real
+  - name: f37
+    typeID: Common:Real
+  - name: f38
+    typeID: Common:Real
+  - name: f39
+    typeID: Common:Real
+  - name: f40
+    typeID: Common:Real
+  - name: f41
+    typeID: Common:Real
+  - name: f42
+    typeID: Common:Real
+  - name: f43
+    typeID: Common:Real
+  - name: f44
+    typeID: Common:Real
+  - name: f45
+    typeID: Common:Real
+  - name: f46
+    typeID: Common:Real
+  - name: f47
+    typeID: Common:Real
+  - name: f48
+    typeID: Common:Real
+  - name: f49
+    typeID: Common:Real
+  - name: f50
+    typeID: Common:Real
+  - name: f51
+    typeID: Common:Real
+  - name: f52
+    typeID: Common:Real
+  - name: f53
+    typeID: Common:Real
+  - name: f54
+    typeID: Common:Real
+  - name: f55
+    typeID: Common:Real
+  - name: f56
+    typeID: Common:Real
+  - name: f57
+    typeID: Common:Real
+  - name: f58
+    typeID: Common:Real
+  - name: f59
+    typeID: Common:Real
+  - name: f60
+    typeID: Common:Real
+  - name: f61
+    typeID: Common:Real
+  - name: f62
+    typeID: Common:Real
+  - name: f63
+    typeID: Common:Real
+  - name: f64
+    typeID: Common:Real
+  - name: f65
+    typeID: Common:Real
+  - name: f66
+    typeID: Common:Real
+  - name: f67
+    typeID: Common:Real
+  - name: f68
+    typeID: Common:Real
+  - name: f69
+    typeID: Common:Real
+  - name: f70
+    typeID: Common:Real
+  - name: f71
+    typeID: Common:Real
+  - name: f72
+    typeID: Common:Real
+  - name: f73
+    typeID: Common:Real
+  - name: f74
+    typeID: Common:Real
+  - name: f75
+    typeID: Common:Real
+  - name: f76
+    typeID: Common:Real
+  - name: f77
+    typeID: Common:Real
+  - name: f78
+    typeID: Common:Real
+  - name: f79
+    typeID: Common:Real
+  - name: f80
+    typeID: Common:Real
+  - name: f81
+    typeID: Common:Real
+  - name: f82
+    typeID: Common:Real
+  - name: f83
+    typeID: Common:Real
+  - name: f84
+    typeID: Common:Real
+  - name: f85
+    typeID: Common:Real
+  - name: f86
+    typeID: Common:Real
+  - name: f87
+    typeID: Common:Real
+  - name: f88
+    typeID: Common:Real
+  - name: f89
+    typeID: Common:Real
+  - name: f90
+    typeID: Common:Real
+  - name: f91
+    typeID: Common:Real
+  - name: f92
+    typeID: Common:Real
+  - name: f93
+    typeID: Common:Real
+  - name: f94
+    typeID: Common:Real
+  - name: f95
+    typeID: Common:Real
+  - name: f96
+    typeID: Common:Real
+  - name: f97
+    typeID: Common:Real
+  - name: f98
+    typeID: Common:Real
+  - name: f99
+    typeID: Common:Real
+  - name: f100
+    typeID: Common:Real
+  - name: f101
+    typeID: Common:Real
+  - name: f102
+    typeID: Common:Real
+  - name: f103
+    typeID: Common:Real
+  - name: f104
+    typeID: Common:Real
+  - name: f105
+    typeID: Common:Real
+  - name: f106
+    typeID: Common:Real
+  - name: f107
+    typeID: Common:Real
+  - name: f108
+    typeID: Common:Real
+  - name: f109
+    typeID: Common:Real
+  - name: f110
+    typeID: Common:Real
+  - name: f111
+    typeID: Common:Real
+  - name: f112
+    typeID: Common:Real
+  - name: f113
+    typeID: Common:Real
+  - name: f114
+    typeID: Common:Real
+  - name: f115
+    typeID: Common:Real
+  - name: f116
+    typeID: Common:Real
+  - name: f117
+    typeID: Common:Real
+  - name: f118
+    typeID: Common:Real
+  - name: f119
+    typeID: Common:Real
+  - name: f120
+    typeID: Common:Real
+  - name: f121
+    typeID: Common:Real
+  - name: f122
+    typeID: Common:Real
+  - name: f123
+    typeID: Common:Real
+  - name: f124
+    typeID: Common:Real
+  - name: f125
+    typeID: Common:Real
+  - name: f126
+    typeID: Common:Real
+  - name: f127
+    typeID: Common:Real
+  - name: f128
+    typeID: Common:Real
+  - name: f129
+    typeID: Common:Real
+  - name: f130
+    typeID: Common:Real
+  - name: f131
+    typeID: Common:Real
+  - name: f132
+    typeID: Common:Real
+  - name: f133
+    typeID: Common:Real
+  - name: f134
+    typeID: Common:Real
+  - name: f135
+    typeID: Common:Real
+  - name: f136
+    typeID: Common:Real
+  - name: f137
+    typeID: Common:Real
+  - name: f138
+    typeID: Common:Real
+  - name: f139
+    typeID: Common:Real
+  - name: f140
+    typeID: Common:Real
+  - name: f141
+    typeID: Common:Real
+  - name: f142
+    typeID: Common:Real
+  - name: f143
+    typeID: Common:Real
+  - name: f144
+    typeID: Common:Real
+  - name: f145
+    typeID: Common:Real
+  - name: f146
+    typeID: Common:Real
+  - name: f147
+    typeID: Common:Real
+  - name: f148
+    typeID: Common:Real
+  - name: f149
+    typeID: Common:Real
+  - name: f150
+    typeID: Common:Real
+  - name: f151
+    typeID: Common:Real
+  - name: f152
+    typeID: Common:Real
+  - name: f153
+    typeID: Common:Real
+  - name: f154
+    typeID: Common:Real
+  - name: f155
+    typeID: Common:Real
+  - name: f156
+    typeID: Common:Real
+  - name: f157
+    typeID: Common:Real
+  - name: f158
+    typeID: Common:Real
+  - name: f159
+    typeID: Common:Real
+  - name: f160
+    typeID: Common:Real
+  - name: f161
+    typeID: Common:Real
+  - name: f162
+    typeID: Common:Real
+  - name: f163
+    typeID: Common:Real
+  - name: f164
+    typeID: Common:Real
+  - name: f165
+    typeID: Common:Real
+  - name: f166
+    typeID: Common:Real
+  - name: f167
+    typeID: Common:Real
+  - name: f168
+    typeID: Common:Real
+  - name: f169
+    typeID: Common:Real
+  - name: f170
+    typeID: Common:Real
+  - name: f171
+    typeID: Common:Real
+  - name: f172
+    typeID: Common:Real
+  - name: f173
+    typeID: Common:Real
+  - name: f174
+    typeID: Common:Real
+  - name: f175
+    typeID: Common:Real
+  - name: f176
+    typeID: Common:Real
+  - name: f177
+    typeID: Common:Real
+  - name: f178
+    typeID: Common:Real
+  - name: f179
+    typeID: Common:Real
+  - name: f180
+    typeID: Common:Real
+  - name: f181
+    typeID: Common:Real
+  - name: f182
+    typeID: Common:Real
+  - name: f183
+    typeID: Common:Real
+  - name: f184
+    typeID: Common:Real
+  - name: f185
+    typeID: Common:Real
+  - name: f186
+    typeID: Common:Real
+  - name: f187
+    typeID: Common:Real
+  - name: f188
+    typeID: Common:Real
+  - name: f189
+    typeID: Common:Real
+  - name: f190
+    typeID: Common:Real
+  - name: f191
+    typeID: Common:Real
+  - name: f192
+    typeID: Common:Real
+  - name: f193
+    typeID: Common:Real
+  - name: f194
+    typeID: Common:Real
+  - name: f195
+    typeID: Common:Real
+  - name: f196
+    typeID: Common:Real
+  - name: f197
+    typeID: Common:Real
+  - name: f198
+    typeID: Common:Real
+  - name: f199
+    typeID: Common:Real
+  - name: f200
+    typeID: Common:Real
+  - name: f201
+    typeID: Common:Real
+  - name: f202
+    typeID: Common:Real
+  - name: f203
+    typeID: Common:Real
+  - name: f204
+    typeID: Common:Real
+  - name: f205
+    typeID: Common:Real
+  - name: f206
+    typeID: Common:Real
+  - name: f207
+    typeID: Common:Real
+  - name: f208
+    typeID: Common:Real
+  - name: f209
+    typeID: Common:Real
+  - name: f210
+    typeID: Common:Real
+  - name: f211
+    typeID: Common:Real
+  - name: f212
+    typeID: Common:Real
+  - name: f213
+    typeID: Common:Real
+  - name: f214
+    typeID: Common:Real
+  - name: f215
+    typeID: Common:Real
+  - name: f216
+    typeID: Common:Real
+  - name: f217
+    typeID: Common:Real
+  - name: f218
+    typeID: Common:Real
+  - name: f219
+    typeID: Common:Real
+  - name: f220
+    typeID: Common:Real
+  - name: f221
+    typeID: Common:Real
+  - name: f222
+    typeID: Common:Real
+  - name: f223
+    typeID: Common:Real
+  - name: f224
+    typeID: Common:Real
+  - name: f225
+    typeID: Common:Real
+  - name: f226
+    typeID: Common:Real
+  - name: f227
+    typeID: Common:Real
+  - name: f228
+    typeID: Common:Real
+  - name: f229
+    typeID: Common:Real
+  - name: f230
+    typeID: Common:Real
+  - name: f231
+    typeID: Common:Real
+  - name: f232
+    typeID: Common:Real
+  - name: f233
+    typeID: Common:Real
+  - name: f234
+    typeID: Common:Real
+  - name: f235
+    typeID: Common:Real
+  - name: f236
+    typeID: Common:Real
+  - name: f237
+    typeID: Common:Real
+  - name: f238
+    typeID: Common:Real
+  - name: f239
+    typeID: Common:Real
+  - name: f240
+    typeID: Common:Real
+  - name: f241
+    typeID: Common:Real
+  - name: f242
+    typeID: Common:Real
+  - name: f243
+    typeID: Common:Real
+  - name: f244
+    typeID: Common:Real
+  - name: f245
+    typeID: Common:Real
+  - name: f246
+    typeID: Common:Real
+  - name: f247
+    typeID: Common:Real
+  - name: f248
+    typeID: Common:Real
+  - name: f249
+    typeID: Common:Real
+  - name: f250
+    typeID: Common:Real
+  - name: f251
+    typeID: Common:Real
+  - name: f252
+    typeID: Common:Real
+  - name: f253
+    typeID: Common:Real
+  - name: f254
+    typeID: Common:Real
+  - name: f255
+    typeID: Common:Real
+  - name: f256
+    typeID: Common:Real
+  - name: f257
+    typeID: Common:Real
+  - name: f258
+    typeID: Common:Real
+  - name: f259
+    typeID: Common:Real
+  - name: f260
+    typeID: Common:Real
+  - name: f261
+    typeID: Common:Real
+  - name: f262
+    typeID: Common:Real
+  - name: f263
+    typeID: Common:Real
+  - name: f264
+    typeID: Common:Real
+  - name: f265
+    typeID: Common:Real
+  - name: f266
+    typeID: Common:Real
+  - name: f267
+    typeID: Common:Real
+  - name: f268
+    typeID: Common:Real
+  - name: f269
+    typeID: Common:Real
+  - name: f270
+    typeID: Common:Real
+  - name: f271
+    typeID: Common:Real
+  - name: f272
+    typeID: Common:Real
+  - name: f273
+    typeID: Common:Real
+  - name: f274
+    typeID: Common:Real
+  - name: f275
+    typeID: Common:Real
+  - name: f276
+    typeID: Common:Real
+  - name: f277
+    typeID: Common:Real
+  - name: f278
+    typeID: Common:Real
+  - name: f279
+    typeID: Common:Real
+  - name: f280
+    typeID: Common:Real
+  - name: f281
+    typeID: Common:Real
+  - name: f282
+    typeID: Common:Real
+  - name: f283
+    typeID: Common:Real
+  - name: f284
+    typeID: Common:Real
+  - name: f285
+    typeID: Common:Real
+  - name: f286
+    typeID: Common:Real
+  - name: f287
+    typeID: Common:Real
+  - name: f288
+    typeID: Common:Real
+  - name: f289
+    typeID: Common:Real
+  - name: f290
+    typeID: Common:Real
+  - name: f291
+    typeID: Common:Real
+  - name: f292
+    typeID: Common:Real
+  - name: f293
+    typeID: Common:Real
+  - name: f294
+    typeID: Common:Real
+  - name: f295
+    typeID: Common:Real
+  - name: f296
+    typeID: Common:Real
+  - name: f297
+    typeID: Common:Real
+  - name: f298
+    typeID: Common:Real
+  - name: f299
+    typeID: Common:Real
+  - name: f300
+    typeID: Common:Real
+  - name: f301
+    typeID: Common:Real
+  - name: f302
+    typeID: Common:Real
+  - name: f303
+    typeID: Common:Real
+  - name: f304
+    typeID: Common:Real
+  - name: f305
+    typeID: Common:Real
+  - name: f306
+    typeID: Common:Real
+  - name: f307
+    typeID: Common:Real
+  - name: f308
+    typeID: Common:Real
+  - name: f309
+    typeID: Common:Real
+  - name: f310
+    typeID: Common:Real
+  - name: f311
+    typeID: Common:Real
+  - name: f312
+    typeID: Common:Real
+  - name: f313
+    typeID: Common:Real
+  - name: f314
+    typeID: Common:Real
+  - name: f315
+    typeID: Common:Real
+  - name: f316
+    typeID: Common:Real
+  - name: f317
+    typeID: Common:Real
+  - name: f318
+    typeID: Common:Real
+  - name: f319
+    typeID: Common:Real
+  - name: f320
+    typeID: Common:Real
+  - name: f321
+    typeID: Common:Real
+  - name: f322
+    typeID: Common:Real
+  - name: f323
+    typeID: Common:Real
+  - name: f324
+    typeID: Common:Real
+  - name: f325
+    typeID: Common:Real
+  - name: f326
+    typeID: Common:Real
+  - name: f327
+    typeID: Common:Real
+  - name: f328
+    typeID: Common:Real
+  - name: f329
+    typeID: Common:Real
+  - name: f330
+    typeID: Common:Real
+  - name: f331
+    typeID: Common:Real
+  - name: f332
+    typeID: Common:Real
+  - name: f333
+    typeID: Common:Real
+  - name: f334
+    typeID: Common:Real
+  - name: f335
+    typeID: Common:Real
+  - name: f336
+    typeID: Common:Real
+  - name: f337
+    typeID: Common:Real
+  - name: f338
+    typeID: Common:Real
+  - name: f339
+    typeID: Common:Real
+  - name: f340
+    typeID: Common:Real
+  - name: f341
+    typeID: Common:Real
+  - name: f342
+    typeID: Common:Real
+  - name: f343
+    typeID: Common:Real
+  - name: f344
+    typeID: Common:Real
+  - name: f345
+    typeID: Common:Real
+  - name: f346
+    typeID: Common:Real
+  - name: f347
+    typeID: Common:Real
+  - name: f348
+    typeID: Common:Real
+  - name: f349
+    typeID: Common:Real
+  - name: f350
+    typeID: Common:Real
+  - name: f351
+    typeID: Common:Real
+  - name: f352
+    typeID: Common:Real
+  - name: f353
+    typeID: Common:Real
+  - name: f354
+    typeID: Common:Real
+  - name: f355
+    typeID: Common:Real
+  - name: f356
+    typeID: Common:Real
+  - name: f357
+    typeID: Common:Real
+  - name: f358
+    typeID: Common:Real
+  - name: f359
+    typeID: Common:Real
+  - name: f360
+    typeID: Common:Real
+  - name: f361
+    typeID: Common:Real
+  - name: f362
+    typeID: Common:Real
+  - name: f363
+    typeID: Common:Real
+  - name: f364
+    typeID: Common:Real
+  - name: f365
+    typeID: Common:Real
+  - name: f366
+    typeID: Common:Real
+  - name: f367
+    typeID: Common:Real
+  - name: f368
+    typeID: Common:Real
+  - name: f369
+    typeID: Common:Real
+  - name: f370
+    typeID: Common:Real
+  - name: f371
+    typeID: Common:Real
+  - name: f372
+    typeID: Common:Real
+  - name: f373
+    typeID: Common:Real
+  - name: f374
+    typeID: Common:Real
+  - name: f375
+    typeID: Common:Real
+  - name: f376
+    typeID: Common:Real
+  - name: f377
+    typeID: Common:Real
+  - name: f378
+    typeID: Common:Real
+  - name: f379
+    typeID: Common:Real
+  - name: f380
+    typeID: Common:Real
+  - name: f381
+    typeID: Common:Real
+  - name: f382
+    typeID: Common:Real
+  - name: f383
+    typeID: Common:Real
+  - name: f384
+    typeID: Common:Real
+  - name: f385
+    typeID: Common:Real
+  - name: f386
+    typeID: Common:Real
+  - name: f387
+    typeID: Common:Real
+  - name: f388
+    typeID: Common:Real
+  - name: f389
+    typeID: Common:Real
+  - name: f390
+    typeID: Common:Real
+  - name: f391
+    typeID: Common:Real
+  - name: f392
+    typeID: Common:Real
+  - name: f393
+    typeID: Common:Real
+  - name: f394
+    typeID: Common:Real
+  - name: f395
+    typeID: Common:Real
+  - name: f396
+    typeID: Common:Real
+  - name: f397
+    typeID: Common:Real
+  - name: f398
+    typeID: Common:Real
+  - name: f399
+    typeID: Common:Real
+  - name: f400
+    typeID: Common:Real
+  - name: f401
+    typeID: Common:Real
+  - name: f402
+    typeID: Common:Real
+  - name: f403
+    typeID: Common:Real
+  - name: f404
+    typeID: Common:Real
+  - name: f405
+    typeID: Common:Real
+  - name: f406
+    typeID: Common:Real
+  - name: f407
+    typeID: Common:Real
+  - name: f408
+    typeID: Common:Real
+  - name: f409
+    typeID: Common:Real
+  - name: f410
+    typeID: Common:Real
+  - name: f411
+    typeID: Common:Real
+  - name: f412
+    typeID: Common:Real
+  - name: f413
+    typeID: Common:Real
+  - name: f414
+    typeID: Common:Real
+  - name: f415
+    typeID: Common:Real
+  - name: f416
+    typeID: Common:Real
+  - name: f417
+    typeID: Common:Real
+  - name: f418
+    typeID: Common:Real
+  - name: f419
+    typeID: Common:Real
+  - name: f420
+    typeID: Common:Real
+  - name: f421
+    typeID: Common:Real
+  - name: f422
+    typeID: Common:Real
+  - name: f423
+    typeID: Common:Real
+  - name: f424
+    typeID: Common:Real
+  - name: f425
+    typeID: Common:Real
+  - name: f426
+    typeID: Common:Real
+  - name: f427
+    typeID: Common:Real
+  - name: f428
+    typeID: Common:Real
+  - name: f429
+    typeID: Common:Real
+  - name: f430
+    typeID: Common:Real
+  - name: f431
+    typeID: Common:Real
+  - name: f432
+    typeID: Common:Real
+  - name: f433
+    typeID: Common:Real
+  - name: f434
+    typeID: Common:Real
+  - name: f435
+    typeID: Common:Real
+  - name: f436
+    typeID: Common:Real
+  - name: f437
+    typeID: Common:Real
+  - name: f438
+    typeID: Common:Real
+  - name: f439
+    typeID: Common:Real
+  - name: f440
+    typeID: Common:Real
+  - name: f441
+    typeID: Common:Real
+  - name: f442
+    typeID: Common:Real
+  - name: f443
+    typeID: Common:Real
+  - name: f444
+    typeID: Common:Real
+  - name: f445
+    typeID: Common:Real
+  - name: f446
+    typeID: Common:Real
+  - name: f447
+    typeID: Common:Real
+  - name: f448
+    typeID: Common:Real
+  - name: f449
+    typeID: Common:Real
+  - name: f450
+    typeID: Common:Real
+  - name: f451
+    typeID: Common:Real
+  - name: f452
+    typeID: Common:Real
+  - name: f453
+    typeID: Common:Real
+  - name: f454
+    typeID: Common:Real
+  - name: f455
+    typeID: Common:Real
+  - name: f456
+    typeID: Common:Real
+  - name: f457
+    typeID: Common:Real
+  - name: f458
+    typeID: Common:Real
+  - name: f459
+    typeID: Common:Real
+  - name: f460
+    typeID: Common:Real
+  - name: f461
+    typeID: Common:Real
+  - name: f462
+    typeID: Common:Real
+  - name: f463
+    typeID: Common:Real
+  - name: f464
+    typeID: Common:Real
+  - name: f465
+    typeID: Common:Real
+  - name: f466
+    typeID: Common:Real
+  - name: f467
+    typeID: Common:Real
+  - name: f468
+    typeID: Common:Real
+  - name: f469
+    typeID: Common:Real
+  - name: f470
+    typeID: Common:Real
+  - name: f471
+    typeID: Common:Real
+  - name: f472
+    typeID: Common:Real
+  - name: f473
+    typeID: Common:Real
+  - name: f474
+    typeID: Common:Real
+  - name: f475
+    typeID: Common:Real
+  - name: f476
+    typeID: Common:Real
+  - name: f477
+    typeID: Common:Real
+  - name: f478
+    typeID: Common:Real
+  - name: f479
+    typeID: Common:Real
+  - name: f480
+    typeID: Common:Real
+  - name: f481
+    typeID: Common:Real
+  - name: f482
+    typeID: Common:Real
+  - name: f483
+    typeID: Common:Real
+  - name: f484
+    typeID: Common:Real
+  - name: f485
+    typeID: Common:Real
+  - name: f486
+    typeID: Common:Real
+  - name: f487
+    typeID: Common:Real
+  - name: f488
+    typeID: Common:Real
+  - name: f489
+    typeID: Common:Real
+  - name: f490
+    typeID: Common:Real
+  - name: f491
+    typeID: Common:Real
+  - name: f492
+    typeID: Common:Real
+  - name: f493
+    typeID: Common:Real
+  - name: f494
+    typeID: Common:Real
+  - name: f495
+    typeID: Common:Real
+  - name: f496
+    typeID: Common:Real
+  - name: f497
+    typeID: Common:Real
+  - name: f498
+    typeID: Common:Real
+  - name: f499
+    typeID: Common:Real
+  - name: f500
+    typeID: Common:Real
+  - name: f501
+    typeID: Common:Real
+  - name: f502
+    typeID: Common:Real
+  - name: f503
+    typeID: Common:Real
+  - name: f504
+    typeID: Common:Real
+  - name: f505
+    typeID: Common:Real
+  - name: f506
+    typeID: Common:Real
+  - name: f507
+    typeID: Common:Real
+  - name: f508
+    typeID: Common:Real
+  - name: f509
+    typeID: Common:Real
+  - name: f510
+    typeID: Common:Real
+  - name: f511
+    typeID: Common:Real
+  - name: f512
+    typeID: Common:Real
+  - name: f513
+    typeID: Common:Real
+  - name: f514
+    typeID: Common:Real
+  - name: f515
+    typeID: Common:Real
+  - name: f516
+    typeID: Common:Real
+  - name: f517
+    typeID: Common:Real
+  - name: f518
+    typeID: Common:Real
+  - name: f519
+    typeID: Common:Real
+  - name: f520
+    typeID: Common:Real
+  - name: f521
+    typeID: Common:Real
+  - name: f522
+    typeID: Common:Real
+  - name: f523
+    typeID: Common:Real
+  - name: f524
+    typeID: Common:Real
+  - name: f525
+    typeID: Common:Real
+  - name: f526
+    typeID: Common:Real
+  - name: f527
+    typeID: Common:Real
+  - name: f528
+    typeID: Common:Real
+  - name: f529
+    typeID: Common:Real
+  - name: f530
+    typeID: Common:Real
+  - name: f531
+    typeID: Common:Real
+  - name: f532
+    typeID: Common:Real
+  - name: f533
+    typeID: Common:Real
+  - name: f534
+    typeID: Common:Real
+  - name: f535
+    typeID: Common:Real
+  - name: f536
+    typeID: Common:Real
+  - name: f537
+    typeID: Common:Real
+  - name: f538
+    typeID: Common:Real
+  - name: f539
+    typeID: Common:Real
+  - name: f540
+    typeID: Common:Real
+  - name: f541
+    typeID: Common:Real
+  - name: f542
+    typeID: Common:Real
+  - name: f543
+    typeID: Common:Real
+  - name: f544
+    typeID: Common:Real
+  - name: f545
+    typeID: Common:Real
+  - name: f546
+    typeID: Common:Real
+  - name: f547
+    typeID: Common:Real
+  - name: f548
+    typeID: Common:Real
+  - name: f549
+    typeID: Common:Real
+  - name: f550
+    typeID: Common:Real
+  - name: f551
+    typeID: Common:Real
+  - name: f552
+    typeID: Common:Real
+  - name: f553
+    typeID: Common:Real
+  - name: f554
+    typeID: Common:Real
+  - name: f555
+    typeID: Common:Real
+  - name: f556
+    typeID: Common:Real
+  - name: f557
+    typeID: Common:Real
+  - name: f558
+    typeID: Common:Real
+  - name: f559
+    typeID: Common:Real
+  - name: f560
+    typeID: Common:Real
+  - name: f561
+    typeID: Common:Real
+  - name: f562
+    typeID: Common:Real
+  - name: f563
+    typeID: Common:Real
+  - name: f564
+    typeID: Common:Real
+  - name: f565
+    typeID: Common:Real
+  - name: f566
+    typeID: Common:Real
+  - name: f567
+    typeID: Common:Real
+  - name: f568
+    typeID: Common:Real
+  - name: f569
+    typeID: Common:Real
+  - name: f570
+    typeID: Common:Real
+  - name: f571
+    typeID: Common:Real
+  - name: f572
+    typeID: Common:Real
+  - name: f573
+    typeID: Common:Real
+  - name: f574
+    typeID: Common:Real
+  - name: f575
+    typeID: Common:Real
+  - name: f576
+    typeID: Common:Real
+  - name: f577
+    typeID: Common:Real
+  - name: f578
+    typeID: Common:Real
+  - name: f579
+    typeID: Common:Real
+  - name: f580
+    typeID: Common:Real
+  - name: f581
+    typeID: Common:Real
+  - name: f582
+    typeID: Common:Real
+  - name: f583
+    typeID: Common:Real
+  - name: f584
+    typeID: Common:Real
+  - name: f585
+    typeID: Common:Real
+  - name: f586
+    typeID: Common:Real
+  - name: f587
+    typeID: Common:Real
+  - name: f588
+    typeID: Common:Real
+  - name: f589
+    typeID: Common:Real
+  - name: f590
+    typeID: Common:Real
+  - name: f591
+    typeID: Common:Real
+  - name: f592
+    typeID: Common:Real
+  - name: f593
+    typeID: Common:Real
+  - name: f594
+    typeID: Common:Real
+  - name: f595
+    typeID: Common:Real
+  - name: f596
+    typeID: Common:Real
+  - name: f597
+    typeID: Common:Real
+  - name: f598
+    typeID: Common:Real
+  - name: f599
+    typeID: Common:Real
+  - name: f600
+    typeID: Common:Real
+  - name: f601
+    typeID: Common:Real
+  - name: f602
+    typeID: Common:Real
+  - name: f603
+    typeID: Common:Real
+  - name: f604
+    typeID: Common:Real
+  - name: f605
+    typeID: Common:Real
+  - name: f606
+    typeID: Common:Real
+  - name: f607
+    typeID: Common:Real
+  - name: f608
+    typeID: Common:Real
+  - name: f609
+    typeID: Common:Real
+  - name: f610
+    typeID: Common:Real
+  - name: f611
+    typeID: Common:Real
+  - name: f612
+    typeID: Common:Real
+  - name: f613
+    typeID: Common:Real
+  - name: f614
+    typeID: Common:Real
+  - name: f615
+    typeID: Common:Real
+  - name: f616
+    typeID: Common:Real
+  - name: f617
+    typeID: Common:Real
+  - name: f618
+    typeID: Common:Real
+  - name: f619
+    typeID: Common:Real
+  - name: f620
+    typeID: Common:Real
+  - name: f621
+    typeID: Common:Real
+  - name: f622
+    typeID: Common:Real
+  - name: f623
+    typeID: Common:Real
+  - name: f624
+    typeID: Common:Real
+  - name: f625
+    typeID: Common:Real
+  - name: f626
+    typeID: Common:Real
+  - name: f627
+    typeID: Common:Real
+  - name: f628
+    typeID: Common:Real
+  - name: f629
+    typeID: Common:Real
+  - name: f630
+    typeID: Common:Real
+  - name: f631
+    typeID: Common:Real
+  - name: f632
+    typeID: Common:Real
+  - name: f633
+    typeID: Common:Real
+  - name: f634
+    typeID: Common:Real
+  - name: f635
+    typeID: Common:Real
+  - name: f636
+    typeID: Common:Real
+  - name: f637
+    typeID: Common:Real
+  - name: f638
+    typeID: Common:Real
+  - name: f639
+    typeID: Common:Real
+  - name: f640
+    typeID: Common:Real
+  - name: f641
+    typeID: Common:Real
+  - name: f642
+    typeID: Common:Real
+  - name: f643
+    typeID: Common:Real
+  - name: f644
+    typeID: Common:Real
+  - name: f645
+    typeID: Common:Real
+  - name: f646
+    typeID: Common:Real
+  - name: f647
+    typeID: Common:Real
+  - name: f648
+    typeID: Common:Real
+  - name: f649
+    typeID: Common:Real
+  - name: f650
+    typeID: Common:Real
+  - name: f651
+    typeID: Common:Real
+  - name: f652
+    typeID: Common:Real
+  - name: f653
+    typeID: Common:Real
+  - name: f654
+    typeID: Common:Real
+  - name: f655
+    typeID: Common:Real
+  - name: f656
+    typeID: Common:Real
+  - name: f657
+    typeID: Common:Real
+  - name: f658
+    typeID: Common:Real
+  - name: f659
+    typeID: Common:Real
+  - name: f660
+    typeID: Common:Real
+  - name: f661
+    typeID: Common:Real
+  - name: f662
+    typeID: Common:Real
+  - name: f663
+    typeID: Common:Real
+  - name: f664
+    typeID: Common:Real
+  - name: f665
+    typeID: Common:Real
+  - name: f666
+    typeID: Common:Real
+  - name: f667
+    typeID: Common:Real
+  - name: f668
+    typeID: Common:Real
+  - name: f669
+    typeID: Common:Real
+  - name: f670
+    typeID: Common:Real
+  - name: f671
+    typeID: Common:Real
+  - name: f672
+    typeID: Common:Real
+  - name: f673
+    typeID: Common:Real
+  - name: f674
+    typeID: Common:Real
+  - name: f675
+    typeID: Common:Real
+  - name: f676
+    typeID: Common:Real
+  - name: f677
+    typeID: Common:Real
+  - name: f678
+    typeID: Common:Real
+  - name: f679
+    typeID: Common:Real
+  - name: f680
+    typeID: Common:Real
+  - name: f681
+    typeID: Common:Real
+  - name: f682
+    typeID: Common:Real
+  - name: f683
+    typeID: Common:Real
+  - name: f684
+    typeID: Common:Real
+  - name: f685
+    typeID: Common:Real
+  - name: f686
+    typeID: Common:Real
+  - name: f687
+    typeID: Common:Real
+  - name: f688
+    typeID: Common:Real
+  - name: f689
+    typeID: Common:Real
+  - name: f690
+    typeID: Common:Real
+  - name: f691
+    typeID: Common:Real
+  - name: f692
+    typeID: Common:Real
+  - name: f693
+    typeID: Common:Real
+  - name: f694
+    typeID: Common:Real
+  - name: f695
+    typeID: Common:Real
+  - name: f696
+    typeID: Common:Real
+  - name: f697
+    typeID: Common:Real
+  - name: f698
+    typeID: Common:Real
+  - name: f699
+    typeID: Common:Real
+  - name: f700
+    typeID: Common:Real
+  - name: f701
+    typeID: Common:Real
+  - name: f702
+    typeID: Common:Real
+  - name: f703
+    typeID: Common:Real
+  - name: f704
+    typeID: Common:Real
+  - name: f705
+    typeID: Common:Real
+  - name: f706
+    typeID: Common:Real
+  - name: f707
+    typeID: Common:Real
+  - name: f708
+    typeID: Common:Real
+  - name: f709
+    typeID: Common:Real
+  - name: f710
+    typeID: Common:Real
+  - name: f711
+    typeID: Common:Real
+  - name: f712
+    typeID: Common:Real
+  - name: f713
+    typeID: Common:Real
+  - name: f714
+    typeID: Common:Real
+  - name: f715
+    typeID: Common:Real
+  - name: f716
+    typeID: Common:Real
+  - name: f717
+    typeID: Common:Real
+  - name: f718
+    typeID: Common:Real
+  - name: f719
+    typeID: Common:Real
+  - name: f720
+    typeID: Common:Real
+  - name: f721
+    typeID: Common:Real
+  - name: f722
+    typeID: Common:Real
+  - name: f723
+    typeID: Common:Real
+  - name: f724
+    typeID: Common:Real
+  - name: f725
+    typeID: Common:Real
+  - name: f726
+    typeID: Common:Real
+  - name: f727
+    typeID: Common:Real
+  - name: f728
+    typeID: Common:Real
+  - name: f729
+    typeID: Common:Real
+  - name: f730
+    typeID: Common:Real
+  - name: f731
+    typeID: Common:Real
+  - name: f732
+    typeID: Common:Real
+  - name: f733
+    typeID: Common:Real
+  - name: f734
+    typeID: Common:Real
+  - name: f735
+    typeID: Common:Real
+  - name: f736
+    typeID: Common:Real
+  - name: f737
+    typeID: Common:Real
+  - name: f738
+    typeID: Common:Real
+  - name: f739
+    typeID: Common:Real
+  - name: f740
+    typeID: Common:Real
+  - name: f741
+    typeID: Common:Real
+  - name: f742
+    typeID: Common:Real
+  - name: f743
+    typeID: Common:Real
+  - name: f744
+    typeID: Common:Real
+  - name: f745
+    typeID: Common:Real
+  - name: f746
+    typeID: Common:Real
+  - name: f747
+    typeID: Common:Real
+  - name: f748
+    typeID: Common:Real
+  - name: f749
+    typeID: Common:Real
+  - name: f750
+    typeID: Common:Real
+  - name: f751
+    typeID: Common:Real
+  - name: f752
+    typeID: Common:Real
+  - name: f753
+    typeID: Common:Real
+  - name: f754
+    typeID: Common:Real
+  - name: f755
+    typeID: Common:Real
+  - name: f756
+    typeID: Common:Real
+  - name: f757
+    typeID: Common:Real
+  - name: f758
+    typeID: Common:Real
+  - name: f759
+    typeID: Common:Real
+  - name: f760
+    typeID: Common:Real
+  - name: f761
+    typeID: Common:Real
+  - name: f762
+    typeID: Common:Real
+  - name: f763
+    typeID: Common:Real
+  - name: f764
+    typeID: Common:Real
+  - name: f765
+    typeID: Common:Real
+  - name: f766
+    typeID: Common:Real
+  - name: f767
+    typeID: Common:Real
+  - name: f768
+    typeID: Common:Real
+  - name: f769
+    typeID: Common:Real
+  - name: f770
+    typeID: Common:Real
+  - name: f771
+    typeID: Common:Real
+  - name: f772
+    typeID: Common:Real
+  - name: f773
+    typeID: Common:Real
+  - name: f774
+    typeID: Common:Real
+  - name: f775
+    typeID: Common:Real
+  - name: f776
+    typeID: Common:Real
+  - name: f777
+    typeID: Common:Real
+  - name: f778
+    typeID: Common:Real
+  - name: f779
+    typeID: Common:Real
+  - name: f780
+    typeID: Common:Real
+  - name: f781
+    typeID: Common:Real
+  - name: f782
+    typeID: Common:Real
+  - name: f783
+    typeID: Common:Real
+
+views: 
+- name: "ReadMNISTData"
+  transformations:
+  - operation: listCollection
+    as: listCollection
+    collection: ListCollectionCheck
+  - operation: readCollection
+    as: readCollection
+    collection: ListCollectionCheck
+    enforceSchema: true
+- name: "run_dae_model"
+  transformations:
+  - operation: readView
+    as: read_MNIST_dataset
+    view: ReadMNISTData
+  - hiddenLayers:
+    - numNeurons: 500
+      layerType: RELU
+    - numNeurons: 500
+      layerType: RELU
+    - numNeurons: 2
+      layerType: LINEAR
+    - numNeurons: 500
+      layerType: RELU
+    - numNeurons: 500
+      layerType: RELU
+    maxEpochs: 50
+    minibatchSize: 100
+    learningRate: 1E-4
+    learningRateEpochMultiplier: 0.999
+    inputSwapNoise: 0.15
+    foreach:
+      type: Common:AnyNumber
+    as: dae
+    source: read_MNIST_dataset
+    operation: deepAutoEncoderTrainer
+  persist:
+    variables:
+    - name: dae
+  graphs:
+  - type: graph
+    name: Scatter Plots
+    title: scatter
+    xAxis: out0
+    series:
+    - y: out1
+      seriesType: scatter
+      color: '#7cb5ec'
+      partitionBy:
+      - target
+- name: test_mnist
+  transformations:
+  - operation: readCollection
+    as: readCollection
+    collection: mnistCol
+  - hiddenLayers:
+    - numNeurons: 500
+      layerType: RELU
+    - numNeurons: 500
+      layerType: RELU
+    - numNeurons: 5
+      layerType: LINEAR
+    - numNeurons: 500
+      layerType: RELU
+    - numNeurons: 500
+      layerType: RELU
+    maxEpochs: 50
+    minibatchSize: 100
+    learningRate: 1E-4
+    learningRateEpochMultiplier: 0.999
+    inputSwapNoise: 0.15
+    foreach:
+      type: Common:AnyNumber
+    as: dae
+    source: readCollection
+    operation: deepAutoEncoderTrainer
+  persist:
+    variables:
+    - name: dae
+  graphs:
+  - type: graph
+    name: graph 1
+    title: scatter
+    xAxis: out0
+    series:
+    - y: out1
+      seriesType: scatter
+      color: '#7cb5ec'
+      partitionBy:
+      - target

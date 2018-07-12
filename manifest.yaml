@@ -1,0 +1,8 @@
+displayName: MNISTDAEAW_GITHUB
+projectKey: mnistdaeaw_github
+version: 1.0.0
+modules:
+- fileSearchPaths:
+  - code
+  - taxonomy
+  name: common

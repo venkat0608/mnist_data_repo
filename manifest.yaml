@@ -1,8 +1,15 @@
-displayName: MNISTDAEAWGITHUB
-projectKey: mnistdaeawgithub
-version: 1.0.0
+---
+displayName: "MNISTDAEAWGITHUB"
+version: "1.0.0"
+releaseDate: "09-04-2018"
 modules:
-- fileSearchPaths:
-  - code
-  - taxonomy
-  name: common
+- name: "common"
+  fileSearchPaths:
+  - "code"
+  - "taxonomy"
+outputDefinition:
+  type: "avro8"
+  parallelismStrategy: "AUTO"
+  fileExtension: ".avro"
+  compression: "SNAPPY"
+projectKey: "mnistdaeawgithub"

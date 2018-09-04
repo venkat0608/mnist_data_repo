@@ -12,7 +12,7 @@ collections:
   header: true
   format: delimitedFile
   filePatterns:
-  - ${dataDir}/data/m*.csv
+  - ${input_dir}/m*.csv
   schema: mnistCol_schema
 - name: mnistCol
   header: true

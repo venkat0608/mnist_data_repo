@@ -6,3 +6,5 @@ modules:
   - code
   - taxonomy
   name: common
+  version: 1.0.0
+sighubVersion: 4.1.10

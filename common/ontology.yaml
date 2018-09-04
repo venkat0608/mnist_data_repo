@@ -1,0 +1,80 @@
+types:
+  "Retail:Datetime":
+    parseRules:
+    - pattern: yyyyMMddHHmmss
+    - pattern: yyyy-MM-dd HH:mm:ss
+    - pattern: MM/dd/yyyy HH:mm:ss
+    - pattern: MM/dd/yyyy HH:mm
+    - pattern: MM/dd/yyyy H:mm
+    - pattern: M/dd/yyyy HH:mm
+    - pattern: M/dd/yyyy H:mm
+    - pattern: MM/d/yyyy HH:mm
+    - pattern: MM/d/yyyy H:mm
+    - pattern: M/d/yyyy HH:mm
+    - pattern: M/d/yyyy H:mm
+    - pattern: yyyyMMdd
+    parentTypeID: Common:Timestamp
+  "Retail:Date":
+    parseRules:
+    - pattern: MM/dd/yyyy
+    - pattern: ddMMMyyyy
+    - pattern: yyyy-mm-dd
+    parentTypeID: Common:Date
+  "Retail:EpochTime":
+    parentTypeID: Common:Integer
+  Retail:EpochHour:
+    parentTypeID: Common:Integer
+  Retail:EpochDay:
+    parentTypeID: Common:Integer
+  Retail:EpochMonth:
+    parentTypeID: Common:Integer
+#Use this for All Flag Fields
+  Retail:FlagInd:
+   enums: [Y,N,0,1,-1,F]
+   parentTypeID: Common:String
+#Use this for all Amount Fields
+  Retail:Amount:
+    precision: 2
+    parentTypeID: Common:Real
+#Use this for all Quantity Fields
+  Retail:Quantity:
+    parentTypeID: Common:Integer
+#Use this for all Identity Fields such as Store Number, SKU Number Fields
+  Retail:Identity:
+    parentTypeID: Common:Long
+#Use this for all Event's. Currently coupon related events. We can expand later to web/app events.
+  Retail:Event:
+   enums: [rcv,view,click,prnt,load,rdm,open]
+   parentTypeID: Common:String
+#Use this for all Amount Fields in Raw Data
+  Retail:AmountRaw:
+    parentTypeID: Common:String 
+#Use this for Transaction Event Types
+  Retail:TxnEventType:
+   enums: [0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,V,W,Y,]
+   parentTypeID: Common:String
+#Use this for Transaction Item Types
+  Retail:TxnItemType:
+   enums: [1,2,3,4,5,6,7]
+   parentTypeID: Common:String
+#Use this for Transaction Types
+  Retail:TxnType:
+   enums: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,101,102,105,106,107]
+   parentTypeID: Common:String
+#Use this for Customer Order and Delivery Types
+  Retail:TxnCustOrdType:
+   enums: [1,2,3,4,5,6,7,8,9]     
+   parentTypeID: Common:String
+#Use this for Redeem Override Reason
+  Retail:RdmOvrdRsn:
+   enums: [0,1,2,3,4,5,6,21,22,23,24,25,26]
+   parentTypeID: Common:String
+#Use this for TRUE/FALSE in Localytics data
+  Retail:Boolean:
+   enums: [true,false,"true","false"]
+   parentTypeID: Common:String
+  Retail:Real4:                    
+                       precision: "4"                   
+                       parentTypeID: "Common:Real"
+#	
+#	
